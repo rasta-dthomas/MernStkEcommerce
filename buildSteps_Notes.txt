@@ -1,0 +1,142 @@
+                            SETUP
+Building Out the Folder Structure for the Mern Stack Ecommerce
+Website
+
+1. Create a new folder and name it.
+2. Navigate (cd foldername)to the new folder using a terminal 
+   application and open a (git) bash terminal.
+
+In your terminal, at the command line prompt ...
+3. Run the command "npm init -y" (in that folder)
+      Explanation:
+      This command initializes the folder. And, the -y arg
+      answers "yes" in advance to all of the setup prompts
+      that require a "yes" or "no" answer.
+4. Run the command "npm i --save-dev nodemon concurrently"
+      Explanation:
+      This command allows you to run multiple commands in
+      a single line as one command (needed in order to run
+      the command that follows in the next step).
+5. Run the command "mkdir frontend backend"
+      Explanation:
+      This command creates two folders, one named "frontend" 
+      and the other named "backend".
+6. Run the command "npm i express mongoose dotenv"
+      Explanation:
+      This command installs the dependencies needed for the
+      backend processes of the application.
+7. Run the command "npm i --save-dev nodemon 
+   concurrently
+      Explanation:
+      This command allows us to run a script that runs the
+      frontend and the backend processes of the application
+      at the same time. With this, there is no need to run
+      two separate terminals to build both.
+8. Navigate to the frontend folder (cd frontend).
+9. Run the command "npx create-react-app ."
+      Explanation:
+      This command will create a new react application.
+
+In the VSCode file explorer window (where you can see all
+of the folders and files) ...
+10. Go to the backend folder and right-click select it.
+11. Create a file by selecting "New File..." and name it
+    server.js.
+
+In the VSCode file editor window ...
+12. Build the server.js file.
+
+In the VSCode file explorer window (where you can see all
+of the folders and files) ...
+13. Move to the root folder.
+14. In your root folder, create a new file named .env.
+    (To make sure you are in the root folder, just left-
+    click the empty space beneath all of the folders,
+    then right-click in that space and select "New File...")
+
+In the VSCode file editor window ...
+15. Add the port variable to the .env file.
+
+In the VSCode file explorer window (where you can see all
+of the folders and files) ...
+16. In your root folder, create a new file named .gitignore.
+    (do the same as in step 14 above)
+17. Move to the .gitignore file that was automatically
+    created in the frontend folder during step .9 above.
+18. Select and copy the entire file.
+19. Move to the .gitignore file you created in step 16 and
+    left-click select it to open it in the VSCode editor
+    window.
+20. Paste the contents copied from the /frontend/.gitignore
+    file into this .gitignore file that you created (in root).
+21. With this .gitignore file still open, modify (change) the
+    dependencies section by changing ...
+
+    "/node_modules" to "node_modules   (exactly like shown,
+                        node_modules/"  but without the
+                                        quotes).
+22. In the misc section, add ".env" (without the quotes),
+    to the list files.
+
+The .git repository needs to be removed from the frontend
+folder. When we manually began creating the folder structure,
+we didn't initialize any folders with git. Running the 
+command "npx create-react-app ." automatically included the
+creation of a git repository in the folder where the command
+was given (the frontend folder).
+
+In your terminal, at the command line prompt ...
+23. Run the command "rm -rf .git"
+      Explanation:
+      This command will remove the git repository from the
+      frontend folder.
+
+In the VSCode file explorer window (where you can see all
+of the folders and files) ...
+24. Right click the .gitignore file in the frontend folder
+    and delete it.
+
+In your terminal, at the command line prompt ...
+25. Run the command "cd ../" to move up to the root folder.
+26. Run the command "git init" to initialize the root
+    folder with a git repository.
+27. Check your file structure and you should find that 
+    the node_modules folders and the .env file are greyed.
+
+The folder structure is now setup with the completion of
+the steps above. Next, will be the creation of the
+scripts.
+
+
+Scripts
+
+In the VSCode file explorer window (where you can see all
+of the folders and files) ...
+28. Move to the package.json folder that's in the root
+    directory and open that file in your editor window.
+29. Modify the file by:
+    a. Changing "test" to "start", and change the value
+       from "echo \"Error: no test specified\" && exit 1"
+       to "node backend/server.js";
+    b. Adding a "server" attribute(key) with the value
+       of "nodemon backend/server.js";
+    c. Adding a "client" attribute(key) with the value
+       of "npm start --prefix frontend";
+    d. Adding a "dev" attribute(key) with the value of
+       "concurrently \"npm run server\" \"npm run client\"";
+
+In your terminal, at the command line prompt ...
+30. Run the command "npm run dev"
+      Explanation:
+      This command will start and run the server
+      and the client
+
+
+
+---------------------------------------------------------------
+
+                    BACKEND 
+Building Out the Folder Structure for the Backend
+
+In your terminal, at the command line prompt ...
+31. Run the command "cd backend/"
