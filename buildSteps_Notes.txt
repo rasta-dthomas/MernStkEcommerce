@@ -140,3 +140,8 @@ Building Out the Folder Structure for the Backend
 
 In your terminal, at the command line prompt ...
 31. Run the command "cd backend/"
+32. Run the command "mkdir config controller data models routes"
+      Explanation:
+      This command will create 5 new folders named "config",
+      "controller", "data", "routes" and "models"
+33.

@@ -3,6 +3,9 @@
 require("dotenv").config();               /* Gives access to the value of
                                              PORT variable */
 const express = require("express");
+const connectDB = require('./config/db');
+
+connectDB();
 
 const app = express();                    /* Initialize express function in app 
                                              variable.*/
