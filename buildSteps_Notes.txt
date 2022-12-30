@@ -3,21 +3,22 @@ Building Out the Folder Structure for the Mern Stack Ecommerce
 Website
 
 1. Create a new folder and name it.
-2. Navigate (cd foldername)to the new folder using a terminal 
-   application and open a (git) bash terminal.
-
+2. Navigate (cd foldername)to the new folder using the integrated 
+   terminal application in VSCode and open a (git) bash terminal.
 In your terminal, at the command line prompt ...
-3. Run the command "npm init -y" (in that folder)
+3. Run the command "npm init -y" (in the project folder)
       Explanation:
-      This command initializes the folder. And, the -y arg
-      answers "yes" in advance to all of the setup prompts
+      This command initializes the folder with npm. The -y
+      arg answers "yes" in advance to all of the setup prompts
       that require a "yes" or "no" answer.
 4. Run the command "npm i --save-dev nodemon concurrently"
       Explanation:
       This command allows you to run multiple commands in
       a single line as one command (needed in order to run
       the command that follows in the next step).
-5. Run the command "mkdir frontend backend"
+5. Create 2 sub-folders in the root folder, one named
+   frontend and the other named backend. Run the command
+   "mkdir frontend backend"
       Explanation:
       This command creates two folders, one named "frontend" 
       and the other named "backend".
@@ -85,7 +86,8 @@ command "npx create-react-app ." automatically included the
 creation of a git repository in the folder where the command
 was given (the frontend folder).
 
-In your terminal, at the command line prompt ...
+In your terminal and in the frontend folder, at the command
+line prompt ...
 23. Run the command "rm -rf .git"
       Explanation:
       This command will remove the git repository from the

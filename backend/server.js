@@ -5,7 +5,7 @@ require("dotenv").config();               /* Gives access to the value of
 const express = require("express");
 const connectDB = require('./config/db');
 
-connectDB();
+connectDB();                              /* Initialize connectDB function. */
 
 const app = express();                    /* Initialize express function in app 
                                              variable.*/
