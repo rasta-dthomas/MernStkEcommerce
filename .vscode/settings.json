@@ -5,5 +5,9 @@
             "Mern",
             "mernstkecommerce",
             "nodemon"
+      ],
+      "cSpell.ignoreWords": [
+            "Alexa",
+            "Technica"
       ]
 }

@@ -142,8 +142,51 @@ Building Out the Folder Structure for the Backend
 
 In your terminal, at the command line prompt ...
 31. Run the command "cd backend/"
-32. Run the command "mkdir config controller data models routes"
+32. Run the command "mkdir config controller data models      
+    routes"
       Explanation:
-      This command will create 5 new folders named "config",
-      "controller", "data", "routes" and "models"
-33.
+      This command will create 5 new folders named: 
+      * "config" - for database setup and instructions,
+      * "controller" - for routes controllers, 
+      * "data" , 
+      * "routes", and 
+      * "models".
+
+            CONNECT THE DATABASE:
+33. In your VSCode editor, go to the Explorer panel and
+    select the backend/config folder.
+
+34. Create a file named db.js in the backend/config Folder
+
+35. Build the db.js file.
+
+36. Go to (or open) the server.js file and import the
+    config/db.js file into this file.
+
+37. In your web browser (Google Chrome, IE, etc...), go
+    to mongodb.com and follow the tutorial/instructions
+    to create/setup a new database cluster.
+
+38. In your VSCode editor, go to the .env file and add
+    the connection string that you obtained from setting
+    up the database as the value of the MONGO_URI
+    variable.
+        * Change <password> to the password used to create
+          the database;
+        * change <dbname> to what you want to call it.
+
+39. In the integrated terminal, run the command ...
+    node backend/server.js
+
+If you executed the above commands properly, you should now
+be able to connect to the database and see the message
+(without the quotes) ...
+
+"Server running on port 5000
+ MongoDB connection SUCCESS"
+
+                    BUILD OUT THE MODELS
+40. Inside of the models folder, create a new file called
+    Product.js (see code for Product.js file)
+
+
